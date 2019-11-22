@@ -1,0 +1,27 @@
+{
+  "name": "desafio-back-end",
+  "version": "1.0.0",
+  "description": "O desafio proposto consiste no desenvolvimento de uma **REST API**, onde testará as habilidades e qualidade de código de um desenvolvedor Back-end desde a contextualização até a sua criação.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enilton/desafio-back-end.git"
+  },
+  "author": "Eniton Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enilton/desafio-back-end/issues"
+  },
+  "homepage": "https://github.com/enilton/desafio-back-end#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}
