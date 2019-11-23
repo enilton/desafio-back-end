@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
 
+
+
 module.exports = {
+
   async buscarTodos(req, res) {
-    const tarefas = await Tarefa.find({})
-      .populate("tags")
-      .populate("usuarios");
+    const tarefas = await Tarefa.find({})      
+      .populate("usuario");
     return res.json(tarefas);
   },
 
@@ -14,6 +16,7 @@ module.exports = {
   },
 
   async criar(req, res) {
+    let usuarioId = req.UserId;
     let tarefa = req.body;
     tarefa = await Tarefa.create(tarefa);
     return res.json(tarefa);

@@ -1,13 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const requireDir = require("require-dir");
+const dataBaseInfo = require('./src/config/database');
 
 const app = express();
+requireDir("./src/model");
+
 
 //DATABASE{
-//DEV
-const mongoDBURL = 'mongodb://usuarioapi:usuarioapi99@ds157857.mlab.com:57857/desafio-back-end-republica-interativa-dev';
-mongoose.connect(mongoDBURL, { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(dataBaseInfo.mongoDBURL, { useNewUrlParser: true, useUnifiedTopology: true});
 //}
 
 //MAIN APP{
@@ -20,4 +22,4 @@ mongoose.connect(mongoDBURL, { useNewUrlParser: true, useUnifiedTopology: true})
   app.listen(port, "0.0.0.0", function() {
   console.log("Listening on Port: " + port);
   });
-  //}
+//}

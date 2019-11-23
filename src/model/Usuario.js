@@ -6,8 +6,24 @@ const UsuarioSchema = new  mongoose.Schema ({
         type: String,
         required: true,
         select: true,
-    }
-    
+    },
+
+    email: {
+        type: String,
+        required: true,
+        select: true,
+    },
+
+    senha: {
+        select: false,
+    },
+
+    hash_senha: {
+        type: String,
+        required: true,
+        select: true,
+    },
+
 });
 
 module.exports = mongoose.model('Usuario',UsuarioSchema);
