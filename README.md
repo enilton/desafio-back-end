@@ -1,4 +1,4 @@
-# Fork de Emilton
+# Fork de Enilton
 
     - Endereço:
 
@@ -12,7 +12,7 @@
     - NPM
             executar **npm install**, seguindo de **npm run dev**
 
-## Enpoints 
+## Enpoints das principais funcionalidades
 
     **LOCAL**
     https://documenter.getpostman.com/view/2857760/SW7dUR9B
