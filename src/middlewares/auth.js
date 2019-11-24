@@ -4,6 +4,8 @@ const { promisify } = require ('util');
 
 module.exports = {
     async autenticar (req,res,next) {
+
+      
       const authHeader = req.headers.authorization;
 
       if(!authHeader){
@@ -12,9 +14,9 @@ module.exports = {
 
       const [, token] = authHeader.split(' ');
 
-      try {
+      try {       
         const decoded = await promisify(jwt.verify)(token, authConfig.secret);
-        req.userId = decoded.id;
+        req.userId = decoded.id;      
         return next();
 
       } catch (error) {

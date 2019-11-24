@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
-
-
+const Tarefa = mongoose.model('Tarefa');
 
 module.exports = {
 
-  async buscarTodos(req, res) {
+  async buscar(req, res) {
     const tarefas = await Tarefa.find({})      
       .populate("usuario");
+    return res.json(tarefas);
+  },
+
+  async buscarTodosPorUsuario(req, res) {
+    const tarefas = await Tarefa.find({ 'usuario' : req.userId });
     return res.json(tarefas);
   },
 
@@ -16,8 +20,8 @@ module.exports = {
   },
 
   async criar(req, res) {
-    let usuarioId = req.UserId;
     let tarefa = req.body;
+    tarefa.usuario = req.userId;
     tarefa = await Tarefa.create(tarefa);
     return res.json(tarefa);
   },
@@ -29,17 +33,9 @@ module.exports = {
     return res.json(tarefa);
   },
 
-  async desativar(req, res) {
+  async remover(req, res) {
     const tarefa = req.body;
-    tarefa.ativo = false;
-    await Tarefa.findByIdAndUpdate(req.params.id, tarefa, { new: true });
+    await Tarefa.findOneAndDelete(req.params.id, tarefa, { new: false });
     return res.json(tarefa);
   },
-
-  async ativar(req, res) {
-    const tarefa = req.body;
-    tarefa.ativo = true;
-    await Tarefa.findByIdAndUpdate(req.params.id, tarefa, { new: true });
-    return res.json(tarefa);
-  }
 };

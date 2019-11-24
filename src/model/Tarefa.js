@@ -15,7 +15,7 @@ const TarefaSchema = new  mongoose.Schema ({
         select: true,
     },   
 
-  dt:{
+    dt:{
         type: Date,
         required: true,       
         select: true,
@@ -36,7 +36,6 @@ const TarefaSchema = new  mongoose.Schema ({
         ref: Usuario
     }
     
-})
-
+});
 
 module.exports = mongoose.model("Tarefa",TarefaSchema);

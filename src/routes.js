@@ -14,11 +14,15 @@ routes.post('/sessions', SessionController.criar);
 
 routes.use(authMiddleware.autenticar);
 
+
+
 routes.get('/usuarios', UsuarioController.buscarTodos);
-routes.get('/tarefas', TarefaController.buscarTodos);
-/*routes.get('/tarefas/buscarPorData', TarefaController.buscarPorData);
-routes.get('/tarefas/:id', TarefaController.detalharEvento);*/
+
+routes.get('/tarefasAll', TarefaController.buscar);
+routes.get('/tarefas', TarefaController.buscarTodosPorUsuario);
 routes.post('/tarefas', TarefaController.criar);
-/*routes.delete('/tarefas', TarefaController.desativar);*/
+routes.get('/tarefas/:id', TarefaController.detalhar);
+routes.put('/tarefas', TarefaController.atualizar);
+routes.delete('/tarefas', TarefaController.remover);
 
 module.exports = routes;
