@@ -14,7 +14,7 @@ routes.post('/sessions', SessionController.criar);
 
 routes.use(authMiddleware.autenticar);
 
-
+routes.post('/logout', SessionController.logout);
 
 routes.get('/usuarios', UsuarioController.buscarTodos);
 

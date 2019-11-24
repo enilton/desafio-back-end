@@ -33,7 +33,13 @@ module.exports = {
       })  
   },
 
-  
+  async logout (req, res){
+    return res.json({                 
+      token: jwt.sign({id : req.userId} , authConfig.secret, {
+        expiresIn: '1s',
+      })
+    })
+  }
 
 };
 
