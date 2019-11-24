@@ -1,8 +1,25 @@
-#Endereço da aplicação
-    
+# Fork de Emilton
 
-# Executar 
-    Executar usando 
+    - Endereço:
+
+    https://ri-desafio-back-end.herokuapp.com/api
+
+## Executar no ambiete local
+
+    - Yarn
+            utilizar os comandos **yarn install**, seguido de **yarn dev**
+
+    - NPM
+            executar **npm install**, seguindo de **npm run dev**
+
+## Enpoints 
+
+    **LOCAL**
+    https://documenter.getpostman.com/view/2857760/SW7dUR9B
+
+    **HEROKU**
+    https://documenter.getpostman.com/view/2857760/SW7dUR9D?version=latest
+
 
 # Desafio Back-end: PHP || NodeJS
 
