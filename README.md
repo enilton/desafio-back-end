@@ -1,3 +1,26 @@
+# Fork de Enilton
+
+    - Endereço:
+
+    https://ri-desafio-back-end.herokuapp.com/api
+
+## Executar no ambiete local
+
+    - Yarn
+            utilizar os comandos **yarn install**, seguido de **yarn dev**
+
+    - NPM
+            executar **npm install**, seguindo de **npm run dev**
+
+## Enpoints das principais funcionalidades
+
+    **LOCAL**
+    https://documenter.getpostman.com/view/2857760/SW7dUR9B
+
+    **HEROKU**
+    https://documenter.getpostman.com/view/2857760/SW7dUR9D?version=latest
+
+
 # Desafio Back-end: PHP || NodeJS
 
 O desafio proposto consiste no desenvolvimento de uma **REST API**, onde testará as habilidades e qualidade de código de um desenvolvedor Back-end desde a contextualização até a sua criação.
